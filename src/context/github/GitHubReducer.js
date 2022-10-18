@@ -1,5 +1,5 @@
 const gitHubReducer = (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'GET_USERS':
       return {
         ...state,
