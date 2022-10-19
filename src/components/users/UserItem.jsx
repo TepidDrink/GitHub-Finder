@@ -6,6 +6,7 @@ UserItem.propTypes = {
 }
 
 function UserItem({ user: { login, avatar_url } }) {
+  const path = `/user/${ login }`;
   return <div className='card shadow-md compact side bg-base-100'>
     <div className='flex-row items-center space-x-4 card-body'>
       <div>
@@ -16,9 +17,9 @@ function UserItem({ user: { login, avatar_url } }) {
         </div>
       </div>
       <div>
-        <Link className='card-title' to={ `/users/${ login }` }>{ login }</Link>
+        <Link className='card-title' to={ path }>{ login }</Link>
         <Link className='text-base-content text-opacity-40'
-              to={ `/users/${ login }` }
+              to={ path }
         >
           Visit Profile
         </Link>
